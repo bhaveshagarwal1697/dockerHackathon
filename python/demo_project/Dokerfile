@@ -1,0 +1,7 @@
+FROM python:3
+ENV PYTHONUNBUFFERED 1
+RUN mkdir /demo_project
+WORKDIR /demo_project
+COPY requirements.txt /demo_project
+RUN pip install -r requirements.txt
+COPY . /demo_project
